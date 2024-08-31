@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <!-- Tài khoản -->
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        android:id="@+id/input_username"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_radius_box"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:elevation="4dp"
+        android:drawableStart="@drawable/person"
+        android:paddingLeft="10dp"/>
+    <!-- Email -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@."
+        android:id="@+id/input_email"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_radius_box"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:elevation="4dp"
+        android:drawableStart="@drawable/lock"
+        android:paddingLeft="10dp"/>
+
+    <!-- Mật khẩu -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^,."
+        android:id="@+id/input_regpassword"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_radius_box"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:elevation="4dp"
+        android:drawableStart="@drawable/lock"
+        android:paddingLeft="10dp"/>
+
+    <!-- Nhập lại mật khẩu -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Re-type Password"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^,."
+        android:id="@+id/input_conpassword"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_radius_box"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:elevation="4dp"
+        android:drawableStart="@drawable/lock"
+        android:paddingLeft="10dp"/>
+
+    <Button
+        android:id="@+id/button_conregister"
+        android:layout_marginTop="25dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/cyan_radius_box"
+        android:elevation="4dp"
+        android:text="Sign up"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/button_backtologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Already have an account" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.doan.bitstop;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -53,6 +55,8 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String checkpass = passwordInput.getText().toString();
                 String checkuser = accountInput.getText().toString();
+                waitingLayout.setVisibility(View.VISIBLE);
+                loginLayout.setVisibility(View.GONE);
                 LoginUser(checkuser,checkpass);
             }
         });
@@ -70,34 +74,27 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if (!queryDocumentSnapshots.isEmpty()) {
-
                             String userID = queryDocumentSnapshots.getDocuments().get(0).getId();
-                            Log.d("Login", userID);
-                            waitingLayout.setVisibility(View.VISIBLE);
-                            loginLayout.setVisibility(View.GONE);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Intent intent = new Intent(Login.this, MainActivity.class);
-                                    intent.putExtra("USER_ID", userID);
-                                    startActivity(intent);
-                                    waitingLayout.setVisibility(View.GONE);
-                                    loginLayout.setVisibility(View.VISIBLE);
-
-                                    finish();
-                                }
-                            }, 4000);
+                            SaveLoginState(userID);
+                            Intent intent = new Intent(Login.this, MainActivity.class);
+                            startActivity(intent);
+                            waitingLayout.setVisibility(View.GONE);
+                            loginLayout.setVisibility(View.VISIBLE);
+                            finish();
 
                         } else {
-                            Log.d("Login", "Thất bại: Sai tài khoản hoặc mật khẩu");
+                            waitingLayout.setVisibility(View.GONE);
+                            loginLayout.setVisibility(View.VISIBLE);
+                            Toast.makeText(getApplicationContext(), "Fail to login, please try later!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.w("Login", "Lỗi khi kiểm tra tài khoản: ", e);
+                        Toast.makeText(getApplicationContext(), "Fail to connect to the server", Toast.LENGTH_SHORT).show();
+                        waitingLayout.setVisibility(View.GONE);
+                        loginLayout.setVisibility(View.VISIBLE);
                     }
                 });
     }
@@ -111,4 +108,13 @@ public class Login extends AppCompatActivity {
         waitingLayout = findViewById(R.id.layout_waiting);
         loginLayout = findViewById(R.id.layout_login);
     }
+
+    private void SaveLoginState(String userID) {
+        SharedPreferences sharedPreferences = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("isLoggedIn", true);
+        editor.putString("USER_ID", userID);
+        editor.apply();
+    }
+
 }

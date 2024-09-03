@@ -11,6 +11,7 @@
     <!--hello-->
 
     <FrameLayout
+        android:id="@+id/main_frame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9">
@@ -25,7 +26,8 @@
         app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@color/gray"
         android:background="@color/white"
-        app:menu="@menu/bottom_navigator">
+        app:menu="@menu/bottom_navigator"
+        android:id="@+id/bottom_navigation">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

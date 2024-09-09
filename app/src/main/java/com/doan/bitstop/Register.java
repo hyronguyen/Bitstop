@@ -23,6 +23,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class Register extends AppCompatActivity {
 
@@ -161,7 +162,8 @@ public class Register extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Map<String, Object> user = new HashMap<>();
         user.put("user_name", username);
-        user.put("user_password", password); // Consider hashing passwords before storing
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        user.put("user_password", hashedPassword);
         user.put("user_mail", email);
 
         db.collection("USERS")

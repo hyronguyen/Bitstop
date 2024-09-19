@@ -10,11 +10,6 @@ import android.view.ViewGroup;
 
 import com.doan.bitstop.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MessageFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MessageFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match

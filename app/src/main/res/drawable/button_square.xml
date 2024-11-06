@@ -1,0 +1,11 @@
+<!-- res/drawable/button_square.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền của nút (màu đỏ) -->
+    <solid android:color="#FF0000" /> <!-- Màu đỏ nổi bật -->
+
+    <!-- Góc vuông cho nút -->
+    <corners android:radius="0dp" />
+
+    <!-- Viền màu trắng -->
+    <stroke android:width="2dp" android:color="@android:color/white" />
+</shape>

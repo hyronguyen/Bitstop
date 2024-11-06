@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1038955184147",
+    "project_id": "bitstop-8047d",
+    "storage_bucket": "bitstop-8047d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038955184147:android:532f5d214e053216fdbfe6",
+        "android_client_info": {
+          "package_name": "com.doan.bitstop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCweSC_YyeJvu7pr4nNU3vw2qYue5JJveY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

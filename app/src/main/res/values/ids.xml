@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="input_address" type="id" />
+    <item name="input_phone" type="id" />
+    <item name="input_credit" type="id" />
+    <item name="input_role" type="id" />
+</resources>

@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number" />
+    <EditText
+        android:id="@+id/editCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Conutry" />
+    <Button
+        android:id="@+id/buttonUseDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use your default address" />
+    <EditText
+        android:id="@+id/editTextCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Coupon Code" />
+
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: 0.00"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/buttonApplyCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply coupon" />
+
+    <Button
+        android:id="@+id/buttonConfirmOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm order" />
+
+
+
+
+</LinearLayout>

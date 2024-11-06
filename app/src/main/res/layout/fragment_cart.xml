@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title for the Cart -->
+    <TextView
+        android:id="@+id/cartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping Cart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- RecyclerView to display cart items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="8dp"/>
+
+    <!-- Total price summary -->
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="end" />
+
+    <!-- Buttons for actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="end"
+        android:paddingTop="16dp">
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Checkout"
+            android:background="@color/dark_cyan"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/emptyCartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty Cart"
+            android:background="@color/dark_cyan"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

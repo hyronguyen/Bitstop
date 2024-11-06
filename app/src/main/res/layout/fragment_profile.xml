@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <!-- layout waiting-->
+    <LinearLayout
+        android:id="@+id/layout_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="84dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/cyan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please wait for logging..."
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- ScrollView for login layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="224dp"
+                android:layout_height="99dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/logo" />
+
+            <!-- Tài khoản -->
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/account_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_radius_box"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:elevation="4dp"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                android:drawableStart="@drawable/person"
+                android:paddingLeft="10dp"/>
+
+            <!-- Email -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/email_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_radius_box"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:elevation="4dp"
+                android:drawableStart="@drawable/lock"
+                android:paddingLeft="10dp"/>
+
+            <!-- New Fields for Registration Information -->
+            <!-- Address -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/address_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_radius_box"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:elevation="4dp"
+                android:paddingLeft="10dp"/>
+
+            <!-- Phone -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/phone_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_radius_box"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:elevation="4dp"
+                android:paddingLeft="10dp"/>
+
+            <!-- Credit -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Credit"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/credit_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_radius_box"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:elevation="4dp"
+                android:paddingLeft="10dp"/>
+
+            <!-- Role -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Role"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/role_info"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_radius_box"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:elevation="4dp"
+                android:paddingLeft="10dp"/>
+
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_marginTop="25dp"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/cyan_radius_box"
+                android:elevation="4dp"
+                android:text="Log out"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Add any other content here if needed -->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

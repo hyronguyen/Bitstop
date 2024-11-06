@@ -1,0 +1,9 @@
+<!-- res/drawable/search_view_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/white" /> <!-- Background color -->
+    <corners android:radius="16dp" /> <!-- Rounded corners -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/darker_gray" /> <!-- Border color -->
+    <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" />
+</shape>
